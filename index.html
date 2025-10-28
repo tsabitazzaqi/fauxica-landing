@@ -112,6 +112,46 @@
             </div>
         </section>
     </main>
-</body>
+    <section id="contact">
+        <h2 style="text-align:center; margin:40px 0 20px;">Hubungi Saya</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email kamu">
+            </div>
+            <div class="form-group">
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan kamu di sini"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Kirim Pesan</button>
+            <p id="form-status"></p>
+        </form>
+    </section>
+<script>
+        // Logika validasi form
+        const contactForm = document.querySelector("#contact-form");
+        const statusMessage = document.querySelector("#form-status");
 
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nama = document.querySelector("#nama").value.trim();
+            const email = document.querySelector("#email").value.trim();
+            const pesan = document.querySelector("#pesan").value.trim();
+
+            if (nama === "" || email === "" || pesan === "") {
+                statusMessage.textContent = "❌ Error: Semua field wajib diisi!";
+                statusMessage.style.color = "red";
+            } else {
+                statusMessage.textContent = "✅ Sukses! Pesan Anda akan segera diproses.";
+                statusMessage.style.color = "green";
+                // contactForm.reset(); // Uncomment kalau mau form dikosongkan setelah submit
+            }
+        });
+    </script>
+</body>
 </html>

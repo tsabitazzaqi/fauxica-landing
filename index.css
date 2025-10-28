@@ -212,6 +212,50 @@ body {
     font-weight: 600;
 }
 
+/* === CONTACT FORM STYLE === */
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto 80px;
+  text-align: left;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d8c69c;
+  outline: none;
+}
+
+#form-status {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
 /* === ANIMATIONS === */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
